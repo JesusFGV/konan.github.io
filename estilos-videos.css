@@ -1,37 +1,58 @@
-body{
-    background: linear-gradient(145deg, #009dff,#f201ff,#5900ff,#7c01ff,#0011ff);
+body {
+    background: linear-gradient(145deg, #009dff, #f201ff, #5900ff, #7c01ff, #0011ff);
     animation: containerGradientAnimation 10s ease infinite;
     background-size: 200% 200%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.texto{
-    display: flex;
-    justify-content: center;
-}
-
-.vd{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-video{
-    width: 40%;
+.video-observe {
+    width: 90vw;
+    max-width: 400px;
     margin: 10px;
     padding: 5px;
     background-color: #000000;
-}
-
-.video-observe{
     box-shadow: 0px 0px 15px 1px black;
     border-radius: 20px;
-    height: fit-content;
+}
+
+.vd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#mensaje {
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+@media (max-width: 768px) {
+    .video-observe {
+        width: 95vw;
+        margin: 5px;
+    }
+
+    #mensaje {
+        font-size: 1em;
+        padding: 15px;
+    }
 }
 
 @keyframes containerGradientAnimation {
@@ -46,22 +67,13 @@ video{
     }
 }
 
-a{
-    font: bold;
+a {
+    font-weight: bold;
     font-size: 2em;
     color: white;
     text-decoration: none;
     padding: 10px;
-    margin: 50px 0 50px 0px;
+    margin: 50px 0;
     transform: scale(1);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-#mensaje{
-    width: 100%;
-    padding: 30px;
-    text-align: justify;
-    font-size: 1.5em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
