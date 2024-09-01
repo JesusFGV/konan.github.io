@@ -1,3 +1,4 @@
+/* Estilo general para el cuerpo */
 body {
     background: linear-gradient(145deg, #009dff, #f201ff, #5900ff, #7c01ff, #0011ff);
     animation: containerGradientAnimation 10s ease infinite;
@@ -5,56 +6,64 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Alineación superior para ajustar la dirección del contenido */
+    align-items: flex-start; /* Alinear contenido al inicio (izquierda) */
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Para evitar desplazamiento horizontal */
+    box-sizing: border-box;
 }
 
+/* Estilo para videos */
 .video-observe {
-    width: 90vw;
-    max-width: 400px;
-    margin: 10px;
+    width: 80vw; /* Ajustar al 80% del viewport para dejar espacio al lado derecho */
+    max-width: 350px; /* Limitar el ancho máximo para asegurar consistencia en pantallas grandes */
+    margin: 20px 0 20px 10px; /* Espacio en la parte superior, inferior y margen a la izquierda */
     padding: 5px;
     background-color: #000000;
     box-shadow: 0px 0px 15px 1px black;
     border-radius: 20px;
+    outline: none; /* Evita bordes visibles cuando se hace clic */
 }
 
+/* Estilo para contenedor de videos */
 .vd {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinear los videos hacia la izquierda */
     align-items: center;
     margin: 10px 0;
 }
 
+/* Estilo para el texto */
 #mensaje {
-    width: 90vw;
-    max-width: 600px;
+    width: 80vw; /* Ajustar al 80% del viewport */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
     padding: 20px;
     text-align: justify;
-    font-size: 1.2em;
-    line-height: 1.5em;
+    font-size: 1.2em; /* Tamaño de fuente reducido para móviles */
+    line-height: 1.5em; /* Mejorar la legibilidad */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste */
     border-radius: 10px;
     box-shadow: 0px 0px 10px 2px black;
+    margin: 20px 0 20px 10px; /* Espacio en la parte superior, inferior y margen a la izquierda */
 }
 
+/* Media queries para pantallas más pequeñas (menos de 768px de ancho) */
 @media (max-width: 768px) {
     .video-observe {
-        width: 95vw;
-        margin: 5px;
+        width: 75vw; /* Más estrecho en pantallas pequeñas para dejar más espacio de navegación */
+        margin: 15px 0 15px 10px; /* Espacio a la izquierda y derecha */
     }
 
     #mensaje {
-        font-size: 1em;
-        padding: 15px;
+        font-size: 1em; /* Reducir el tamaño del texto en pantallas más pequeñas */
+        padding: 15px; /* Menos padding para adaptarse al espacio disponible */
     }
 }
 
+/* Animación de fondo */
 @keyframes containerGradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -67,6 +76,7 @@ body {
     }
 }
 
+/* Estilos para enlaces (si los hubiera) */
 a {
     font-weight: bold;
     font-size: 2em;
@@ -77,3 +87,4 @@ a {
     transform: scale(1);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
