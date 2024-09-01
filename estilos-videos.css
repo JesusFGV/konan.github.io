@@ -6,37 +6,35 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alineación superior para ajustar la dirección del contenido */
-    align-items: flex-start; /* Alinear contenido al inicio (izquierda) */
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Para evitar desplazamiento horizontal */
-    box-sizing: border-box;
 }
 
 /* Estilo para videos */
 .video-observe {
-    width: 80vw; /* Ajustar al 80% del viewport para dejar espacio al lado derecho */
-    max-width: 350px; /* Limitar el ancho máximo para asegurar consistencia en pantallas grandes */
-    margin: 20px 0 20px 10px; /* Espacio en la parte superior, inferior y margen a la izquierda */
+    width: 90vw; /* Ancho del video ajustado al 90% del viewport ancho */
+    max-width: 400px; /* Ancho máximo para asegurar consistencia en pantallas grandes */
+    margin: 10px;
     padding: 5px;
     background-color: #000000;
     box-shadow: 0px 0px 15px 1px black;
     border-radius: 20px;
-    outline: none; /* Evita bordes visibles cuando se hace clic */
 }
 
 /* Estilo para contenedor de videos */
 .vd {
     display: flex;
-    justify-content: flex-start; /* Alinear los videos hacia la izquierda */
+    justify-content: center;
     align-items: center;
     margin: 10px 0;
 }
 
 /* Estilo para el texto */
 #mensaje {
-    width: 80vw; /* Ajustar al 80% del viewport */
+    width: 90vw; /* Ajustar al 90% del viewport */
     max-width: 600px; /* Ancho máximo para pantallas grandes */
     padding: 20px;
     text-align: justify;
@@ -47,14 +45,13 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste */
     border-radius: 10px;
     box-shadow: 0px 0px 10px 2px black;
-    margin: 20px 0 20px 10px; /* Espacio en la parte superior, inferior y margen a la izquierda */
 }
 
 /* Media queries para pantallas más pequeñas (menos de 768px de ancho) */
 @media (max-width: 768px) {
     .video-observe {
-        width: 75vw; /* Más estrecho en pantallas pequeñas para dejar más espacio de navegación */
-        margin: 15px 0 15px 10px; /* Espacio a la izquierda y derecha */
+        width: 95vw; /* Más ancho en pantallas pequeñas */
+        margin: 5px; /* Menos margen para mayor espacio útil */
     }
 
     #mensaje {
@@ -87,4 +84,3 @@ a {
     transform: scale(1);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
